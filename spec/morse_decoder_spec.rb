@@ -17,7 +17,8 @@ describe Morse_decoder do
     it 'converts any single Morse word to English' do
       expect(morse_decoder.decode_morse_word(".... . .-.. .-.. ---")).to eq("HELLO")
       expect(morse_decoder.decode_morse_word(".-- --- .-. .-.. -..")).to eq("WORLD")
-      expect(morse_decoder.decode_morse_word("-- --- --- -.. -... -.-- .")).to eq("GOODBYE")
+      expect(morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
     end
   end
+
 end

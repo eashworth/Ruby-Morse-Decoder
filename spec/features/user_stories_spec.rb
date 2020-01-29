@@ -23,6 +23,7 @@ describe 'User stories' do
     expect { morse_decoder.decode_morse_word(".... . .-.. .-.. ---") }.not_to raise_error
     expect(morse_decoder.decode_morse_word(".... . .-.. .-.. ---")).to eq("HELLO")
     expect(morse_decoder.decode_morse_word(".-- --- .-. .-.. -..")).to eq("WORLD")
-    expect(morse_decoder.decode_morse_word("-- --- --- -.. -... -.-- .")).to eq("GOODBYE")
+    expect(morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
   end
+
 end
