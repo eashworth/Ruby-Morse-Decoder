@@ -26,4 +26,15 @@ describe 'User stories' do
     expect(morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
   end
 
+  # User story 3:
+  # As an English speaker
+  # So I can understand a sentence in Morse code
+  # I would like to translate a sentence in Morse code to English
+
+  it 'So I can understand a sentence in Morse code, translate a sentence in Morse to English' do
+    morse_decoder = Morse_decoder.new
+    expect(morse_decoder.decode_morse_sentence(".... . .-.. .-.. ---/.-- --- .-. .-.. -..")).to eq("HELLO WORLD")
+    expect(morse_decoder.decode_morse_sentence("--. --- --- -.. -... -.-- ./.-- --- .-. .-.. -..")).to eq("GOODBYE WORLD")
+  end
+
 end

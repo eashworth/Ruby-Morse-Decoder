@@ -64,4 +64,12 @@ class Morse_decoder
     return english_chars.join
   end
 
+  def decode_morse_sentence(morse_sentence)
+    morse_words = morse_sentence.split("/")
+    english_words = morse_words.map do |morse_word|
+      decode_morse_word(morse_word)
+    end
+    english_words.join(" ")
+  end
+
 end
