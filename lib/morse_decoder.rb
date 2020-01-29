@@ -53,18 +53,18 @@ class Morse_decoder
   "-..--."=> "/"
 }
 
-  def decode_morse_character(morse_character)
+  def self.decode_morse_character(morse_character)
     return Morse_to_english_dictionary[morse_character]
   end
 
-  def decode_morse_word(morse_word)
+  def self.decode_morse_word(morse_word)
     english_chars = morse_word.split.map do |morse_character|
       decode_morse_character(morse_character)
     end
     return english_chars.join
   end
 
-  def decode_morse_sentence(morse_sentence)
+  def self.decode_morse_sentence(morse_sentence)
     morse_words = morse_sentence.split("/")
     english_words = morse_words.map do |morse_word|
       decode_morse_word(morse_word)
