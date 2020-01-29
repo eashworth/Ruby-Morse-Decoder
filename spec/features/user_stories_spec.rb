@@ -51,6 +51,7 @@ describe 'User stories' do
 
   it 'So I can identify whether a message is in Morse code, I want to be told if the message input is not valid Morse code' do
     expect { Morse_decoder.decode_morse("A") }.to raise_error("Unable to decode: input is not valid Morse code.")
+    expect { Morse_decoder.decode_morse("") }.to raise_error("Unable to decode: input is an empty string.")
   end
 
 end

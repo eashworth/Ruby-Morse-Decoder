@@ -56,6 +56,8 @@ class Morse_decoder
   def self.decode_morse(morse_message)
     if morse_message.length == 1
       decode_morse_character(morse_message)
+    elsif morse_message == ""
+      raise "Unable to decode: input is an empty string."
     elsif morse_message.include?("/")
       decode_morse_sentence(morse_message)
     else
@@ -66,11 +68,11 @@ class Morse_decoder
   private
 
   def self.decode_morse_character(morse_character)
-      if !Morse_to_english_dictionary.key?(morse_character)
+    if !Morse_to_english_dictionary.key?(morse_character)
         raise "Unable to decode: input is not valid Morse code."
-      else
-        return Morse_to_english_dictionary[morse_character]
-      end
+    else
+      return Morse_to_english_dictionary[morse_character]
+    end
   end
 
   def self.decode_morse_word(morse_word)

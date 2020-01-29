@@ -13,7 +13,8 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_character("-.-.")).to eq("C")
     end
     it 'raises an error if the input is not valid Morse code' do
-      expect { morse_decoder.decode_morse_character("A") }.to raise_error("Unable to decode: input is not valid Morse code.")
+      expect { morse_decoder.decode_morse("A") }.to raise_error("Unable to decode: input is not valid Morse code.")
+      expect { morse_decoder.decode_morse("") }.to raise_error("Unable to decode: input is an empty string.")
     end
   end
   describe '.decode_morse_sentence' do
