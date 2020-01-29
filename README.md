@@ -37,7 +37,7 @@ Some common punctuation marks are written as follows:
 
 ### Spacing between written characters and words
 
-The components of a letter are typed without any spaces inserted between them. Letters are separated by a single space and words are separated by /. The string "HELLO WORLD" is written as follows:
+The components of a letter are typed without any spaces inserted between them. Letters are separated by a single space (" ") and words are separated by a forward slash ("/"). The string "HELLO WORLD" is written as follows:
 
 ```
 ".... . .-.. .-.. ---/.-- --- .-. .-.. -.."
