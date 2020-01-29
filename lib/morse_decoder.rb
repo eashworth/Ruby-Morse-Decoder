@@ -66,7 +66,11 @@ class Morse_decoder
   private
 
   def self.decode_morse_character(morse_character)
-    return Morse_to_english_dictionary[morse_character]
+      if !Morse_to_english_dictionary.key?(morse_character)
+        raise "Unable to decode: input is not valid Morse code."
+      else
+        return Morse_to_english_dictionary[morse_character]
+      end
   end
 
   def self.decode_morse_word(morse_word)

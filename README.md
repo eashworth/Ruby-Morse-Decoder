@@ -67,6 +67,8 @@ Add audio output/input using a web audio API
 
 Add output/input with flashing LED/light-dependent resistor
 
+Add ability to translate English to Morse code.
+
 Add prosigns
 
 Further actions triggered by sending a text message

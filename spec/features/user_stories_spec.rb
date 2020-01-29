@@ -6,7 +6,6 @@ describe 'User stories' do
   # I would like to translate any single Morse code character to English
 
   it 'So I can begin understanding Morse code, translate any single Morse code character to English' do
-    expect { Morse_decoder.decode_morse_character("A") }.not_to raise_error
     expect(Morse_decoder.decode_morse_character(".-")).to eq("A")
     expect(Morse_decoder.decode_morse_character("-...")).to eq("B")
     expect(Morse_decoder.decode_morse_character("-.-.")).to eq("C")
@@ -44,4 +43,14 @@ describe 'User stories' do
     expect(Morse_decoder.decode_morse(".... . .-.. .-.. ---")).to eq("HELLO")
     expect(Morse_decoder.decode_morse(".... . .-.. .-.. ---/.-- --- .-. .-.. -..")).to eq("HELLO WORLD")
   end
+
+  # User story 5:
+  # As an English speaker
+  # So I can identify whether a message is in Morse code
+  # I want to be told if the message input is not valid Morse code
+
+  it 'So I can identify whether a message is in Morse code, I want to be told if the message input is not valid Morse code' do
+    expect { Morse_decoder.decode_morse("A") }.to raise_error("Unable to decode: input is not valid Morse code.")
+  end
+
 end

@@ -12,6 +12,9 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_character("-...")).to eq("B")
       expect(morse_decoder.decode_morse_character("-.-.")).to eq("C")
     end
+    it 'raises an error if the input is not valid Morse code' do
+      expect { morse_decoder.decode_morse_character("A") }.to raise_error("Unable to decode: input is not valid Morse code.")
+    end
   end
   describe '.decode_morse_sentence' do
     it 'converts any single Morse word to English' do
