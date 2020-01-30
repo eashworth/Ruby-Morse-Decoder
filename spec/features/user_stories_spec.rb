@@ -31,6 +31,7 @@ describe 'User stories' do
   it 'So I can understand a sentence in Morse code, translate a sentence in Morse to English' do
     expect(Morse_decoder.decode_morse_sentence(".... . .-.. .-.. ---/.-- --- .-. .-.. -..")).to eq("HELLO WORLD")
     expect(Morse_decoder.decode_morse_sentence("--. --- --- -.. -... -.-- ./.-- --- .-. .-.. -..")).to eq("GOODBYE WORLD")
+    expect(Morse_decoder.decode_morse_sentence("- .... ./--.- ..- .. -.-. -.-/-... .-. --- .-- -./..-. --- -..-/.--- ..- -- .--. . -../--- ...- . .-./- .... ./.-.. .- --.. -.--/-.. --- --.")).to eq("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG")
   end
 
   # User story 4:

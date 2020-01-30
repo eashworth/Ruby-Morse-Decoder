@@ -29,6 +29,8 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_sentence(".... . .-.. .-.. ---/.-- --- .-. .-.. -..")).to eq("HELLO WORLD")
       expect(morse_decoder.decode_morse_sentence("--. --- --- -.. -... -.-- ./.-- --- .-. .-.. -..")).to eq("GOODBYE WORLD")
       expect(morse_decoder.decode_morse_sentence(".- -... -.-. --..--/.---- ..--- ...-- --..--/-.- . . .--./-.-. --- -.. .. -. --. -.-.--")).to eq("ABC, 123, KEEP CODING!")
+      expect(Morse_decoder.decode_morse_sentence("- .... ./--.- ..- .. -.-. -.-/-... .-. --- .-- -./..-. --- -..-/.--- ..- -- .--. . -../--- ...- . .-./- .... ./.-.. .- --.. -.--/-.. --- --.")).to eq("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
+)
     end
   end
   describe '.decode_morse' do
