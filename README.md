@@ -24,7 +24,7 @@ Some common punctuation marks are written as follows:
 ) -.--.-
 ( -.--.
 : ---...
-, "--..--
+, --..--
 = -...-
 ! -.-.--
 . .-.-.-
@@ -32,7 +32,7 @@ Some common punctuation marks are written as follows:
 + .-.-.
 " .-..-.
 ? ..--..
-/ -..--.
+/ -..-.
 ```
 
 ### Spacing between written characters and words
