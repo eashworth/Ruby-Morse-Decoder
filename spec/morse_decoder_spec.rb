@@ -11,6 +11,7 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_character(".-")).to eq("A")
       expect(morse_decoder.decode_morse_character("-...")).to eq("B")
       expect(morse_decoder.decode_morse_character("-.-.")).to eq("C")
+      expect(morse_decoder.decode_morse_character(".-..-.")).to eq('"')
     end
     it 'raises an error if the input is not valid Morse code' do
       expect { morse_decoder.decode_morse("A") }.to raise_error("Unable to decode: input is not valid Morse code.")
@@ -22,6 +23,8 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_word(".... . .-.. .-.. ---")).to eq("HELLO")
       expect(morse_decoder.decode_morse_word(".-- --- .-. .-.. -..")).to eq("WORLD")
       expect(morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
+      expect(morse_decoder.decode_morse(".---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----")).to eq("1234567890")
+      expect(morse_decoder.decode_morse(".-... .----. .--.-. -.--.- -.--. ---... --..-- -...- -.-.-- .-.-.- -....- .-.-. ..--.. -..--.")).to eq("&'@)(:,=!.-+?/")
     end
   end
   describe '.decode_morse_sentence' do
@@ -29,7 +32,7 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_sentence(".... . .-.. .-.. ---/.-- --- .-. .-.. -..")).to eq("HELLO WORLD")
       expect(morse_decoder.decode_morse_sentence("--. --- --- -.. -... -.-- ./.-- --- .-. .-.. -..")).to eq("GOODBYE WORLD")
       expect(morse_decoder.decode_morse_sentence(".- -... -.-. --..--/.---- ..--- ...-- --..--/-.- . . .--./-.-. --- -.. .. -. --. -.-.--")).to eq("ABC, 123, KEEP CODING!")
-      expect(Morse_decoder.decode_morse_sentence("- .... ./--.- ..- .. -.-. -.-/-... .-. --- .-- -./..-. --- -..-/.--- ..- -- .--. . -../--- ...- . .-./- .... ./.-.. .- --.. -.--/-.. --- --.")).to eq("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
+      expect(morse_decoder.decode_morse_sentence("- .... ./--.- ..- .. -.-. -.-/-... .-. --- .-- -./..-. --- -..-/.--- ..- -- .--. . -../--- ...- . .-./- .... ./.-.. .- --.. -.--/-.. --- --.")).to eq("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG"
 )
     end
   end

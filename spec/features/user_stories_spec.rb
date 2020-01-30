@@ -21,6 +21,8 @@ describe 'User stories' do
     expect(Morse_decoder.decode_morse_word(".... . .-.. .-.. ---")).to eq("HELLO")
     expect(Morse_decoder.decode_morse_word(".-- --- .-. .-.. -..")).to eq("WORLD")
     expect(Morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
+    expect(Morse_decoder.decode_morse(".---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----")).to eq("1234567890")
+    expect(Morse_decoder.decode_morse(".-... .----. .--.-. -.--.- -.--. ---... --..-- -...- -.-.-- .-.-.- -....- .-.-. ..--.. -..--.")).to eq("&'@)(:,=!.-+?/")
   end
 
   # User story 3:
