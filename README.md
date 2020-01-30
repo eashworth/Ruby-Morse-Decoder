@@ -45,7 +45,7 @@ The components of a letter are typed without any spaces inserted between them. L
 
 ### What this program does
 
-The Morse_to_english class takes an input in the form of a string containing a Morse code message and returns the English translation as a string of upper-case letters.
+The Morse_decoder class takes an input in the form of a string containing a Morse code message and returns the English translation as a string of upper-case letters.
 
 This program is able to decode each of the English alphabet's 26 letters, plus the numbers 0-9 and the common punctuation marks, as shown in the two dictionaries above.
 
