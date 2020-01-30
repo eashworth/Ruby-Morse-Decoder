@@ -9,6 +9,7 @@ describe 'User stories' do
     expect(Morse_decoder.decode_morse_character(".-")).to eq("A")
     expect(Morse_decoder.decode_morse_character("-...")).to eq("B")
     expect(Morse_decoder.decode_morse_character("-.-.")).to eq("C")
+    expect(Morse_decoder.decode_morse_character(".-..-.")).to eq('"')
   end
 
   # User story 2:
@@ -22,7 +23,7 @@ describe 'User stories' do
     expect(Morse_decoder.decode_morse_word(".-- --- .-. .-.. -..")).to eq("WORLD")
     expect(Morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
     expect(Morse_decoder.decode_morse(".---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----")).to eq("1234567890")
-    expect(Morse_decoder.decode_morse(".-... .----. .--.-. -.--.- -.--. ---... --..-- -...- -.-.-- .-.-.- -....- .-.-. ..--.. -..--.")).to eq("&'@)(:,=!.-+?/")
+    expect(Morse_decoder.decode_morse(".-... .----. .--.-. -.--.- -.--. ---... --..-- -...- -.-.-- .-.-.- -....- .-.-. ..--.. -..-.")).to eq("&'@)(:,=!.-+?/")
   end
 
   # User story 3:

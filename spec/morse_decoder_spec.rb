@@ -24,7 +24,7 @@ describe Morse_decoder do
       expect(morse_decoder.decode_morse_word(".-- --- .-. .-.. -..")).to eq("WORLD")
       expect(morse_decoder.decode_morse_word("--. --- --- -.. -... -.-- .")).to eq("GOODBYE")
       expect(morse_decoder.decode_morse(".---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----")).to eq("1234567890")
-      expect(morse_decoder.decode_morse(".-... .----. .--.-. -.--.- -.--. ---... --..-- -...- -.-.-- .-.-.- -....- .-.-. ..--.. -..--.")).to eq("&'@)(:,=!.-+?/")
+      expect(morse_decoder.decode_morse(".-... .----. .--.-. -.--.- -.--. ---... --..-- -...- -.-.-- .-.-.- -....- .-.-. ..--.. -..-.")).to eq("&'@)(:,=!.-+?/")
     end
   end
   describe '.decode_morse_sentence' do
